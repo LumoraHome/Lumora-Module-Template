@@ -1,0 +1,9 @@
+{
+    "id": "publisher.module",
+    "name": "module name",
+    "version": "0.0.1",
+
+    "release_url": "https://github.com/example/plugin-obs/releases/0.0.1/plugin.zip",
+
+    "min_client_version": "0.0.1"
+}
