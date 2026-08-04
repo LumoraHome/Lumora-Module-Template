@@ -1,9 +1,5 @@
 {
     "id": "publisher.module",
     "name": "module name",
-    "version": "0.0.1",
-
-    "release_url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/0.0.1/module.zip",
-
-    "min_client_version": "0.0.1"
+    "release_url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/{version}/module.zip"
 }
