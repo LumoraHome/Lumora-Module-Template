@@ -69,9 +69,9 @@ mkdir -p "$PROJECT_ROOT/output"
 
 (
     cd "$BUILD_DIR"
-    zip -r "$PROJECT_ROOT/output/plugin.zip" package
+    zip -r "$PROJECT_ROOT/output/module.zip" "package"
 )
 
 echo ""
 echo "Package created:"
-echo "  output/plugin.zip"
+echo "  output/module.zip"
