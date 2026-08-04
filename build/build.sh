@@ -5,7 +5,7 @@ set -euo pipefail
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 SRC_DIR="$PROJECT_ROOT/src"
-BUILD_DIR="$PROJECT_ROOT/build/output"
+BUILD_DIR="$PROJECT_ROOT/build/generated"
 PACKAGE_DIR="$BUILD_DIR/package"
 DIST_DIR="$BUILD_DIR/dist"
 
