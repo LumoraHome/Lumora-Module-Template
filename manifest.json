@@ -1,9 +1,15 @@
 {
     "id": "publisher.module",
     "name": "module name",
-    "version": "0.0.1",
-
-    "release_url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/0.0.1/module.zip",
-
-    "min_client_version": "0.0.1"
+    "icon": "https://example.com",
+    "latest_version": "0.0.1",
+    "releases": [
+        {
+            "version": "0.0.1",
+            "release_url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/0.0.1/module.zip",
+            "sha256": "f7a20d510e71fa797fe33f9c04214a0ed08cbcadf4a740f82f9b2bf952f199e3",
+            "min_client_version": "0.0.1",
+            "max_client_version": "0.0.1"
+        }
+    ]
 }
