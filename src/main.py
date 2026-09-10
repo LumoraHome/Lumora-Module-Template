@@ -16,6 +16,13 @@ def handle_command(cmd):
             "status": "stopped"
         }
 
+    if cmd["command"] == "command":
+        return {
+            "id": cmd["id"],
+            "success": True,
+            "status": "ran"
+        }
+
 for line in sys.stdin:
     command = json.loads(line)
 
