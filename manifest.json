@@ -2,7 +2,7 @@
     "id": "publisher.module",
     "name": "module name",
     "icon": "https://example.com",
-    "latest_version": "0.0.1",
+    "latest_version": "0.0.2",
     "releases": [
         {
             "version": "0.0.1",
