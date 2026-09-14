@@ -2,6 +2,8 @@ import sys
 import json
 
 def handle_command(cmd):
+    if not "command" in cmd or not "id" in cmd:
+        return None
     if cmd["command"] == "start":
         return {
             "id": cmd["id"],
@@ -23,9 +25,13 @@ def handle_command(cmd):
             "status": "ran"
         }
 
+sys.stdout.write('{"command":"update_status", "args":["initialized"]}\n')
+sys.stdout.flush()
+
 for line in sys.stdin:
-    command = json.loads(line)
-
-    response = handle_command(command)
-
-    print(json.dumps(response), flush=True)
+    try:
+        command = json.loads(line)
+        response = handle_command(command)
+        print(json.dumps(response), flush=True)
+    except json.JSONDecodeError as e:
+        pass

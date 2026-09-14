@@ -43,6 +43,7 @@ fi
 # Clean
 
 rm -rf "$BUILD_DIR"
+rm -rf "$PROJECT_ROOT/output"
 
 mkdir -p "$PACKAGE_DIR/runtime"
 mkdir -p "$PACKAGE_DIR/ui"
@@ -62,14 +63,14 @@ pyinstaller \
 # Package
 
 cp "$DIST_DIR/plugin" "$PACKAGE_DIR/runtime/"
-cp "$PROJECT_ROOT/manifest.json" "$PACKAGE_DIR/"
+cp "$PROJECT_ROOT/config.json" "$PACKAGE_DIR/"
 cp -r "$PROJECT_ROOT/ui" "$PACKAGE_DIR/"
 
 mkdir -p "$PROJECT_ROOT/output"
 
 (
-    cd "$BUILD_DIR"
-    zip -r "$PROJECT_ROOT/output/module.zip" "package"
+    cd "$PACKAGE_DIR"
+    zip -r "$PROJECT_ROOT/output/module.zip" "."
 )
 
 echo ""

@@ -1,0 +1,9 @@
+{
+    "base_path": "",
+    "web_path": "ui/",
+    "background_loadable": true,
+    "runetime_path": "runtime/",
+    "runtime": {
+        "linux-x86_64": "plugin"
+    }
+}
