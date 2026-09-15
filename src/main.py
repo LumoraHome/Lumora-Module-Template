@@ -1,37 +1,36 @@
+import os
 import sys
 import json
 
+def send(command, args):
+    payload = json.dumps({
+        "command": command,
+        "args": args,
+    }) + "\n"
+
+    sys.stdout.write(payload)
+    sys.stdout.flush()
+
 def handle_command(cmd):
-    if not "command" in cmd or not "id" in cmd:
+    if not "command" in cmd or not "args" in cmd:
         return None
-    if cmd["command"] == "start":
-        return {
-            "id": cmd["id"],
-            "success": True,
-            "status": "started"
-        }
+    match cmd["command"]:
+        case "start":
+            send(command="update_status", args=["running", cmd["args"][0]])
+            send(command="debug", args=["started"])
+        case "stop":
+            send(command="update_status", args=["stopped", cmd["args"][0]])
+            send(command="debug", args=["stopped"])
+        case "command":
+            send(command="debug", args=["command issued"])
 
-    if cmd["command"] == "stop":
-        return {
-            "id": cmd["id"],
-            "success": True,
-            "status": "stopped"
-        }
+send(command="update_status", args=["initialized"])
 
-    if cmd["command"] == "command":
-        return {
-            "id": cmd["id"],
-            "success": True,
-            "status": "ran"
-        }
-
-sys.stdout.write('{"command":"update_status", "args":["initialized"]}\n')
-sys.stdout.flush()
-
-for line in sys.stdin:
+while True:
+    line = sys.stdin.readline()
+    if not line: break
     try:
         command = json.loads(line)
-        response = handle_command(command)
-        print(json.dumps(response), flush=True)
+        handle_command(command)
     except json.JSONDecodeError as e:
         pass
