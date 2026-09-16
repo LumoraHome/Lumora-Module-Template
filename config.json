@@ -1,14 +1,23 @@
 {
-    "base_path": "",
-    "web_path": "ui",
-    "background_loadable": true,
-    "load_on_startup": true,
-    "start_on_startup": true, 
-    "runtime_path": "runtime",
-    "runtime": [
-        {
-            "runtime_target": "linux-x86_64",
-            "path": "plugin"
-        }
-    ]
+    "base": "",
+    "web":{
+        "path": "ui",
+        "entrypoint": "index.html",
+        "enabled": true
+    },
+    "lifecycle": {
+        "background_loadable": true,
+        "load_on_startup": true,
+        "start_on_startup": true
+    },
+    "runtime":{
+        "path": "runtime",
+        "targets": [
+            {
+                "os": "linux",
+                "architecture": "x86_64",
+                "path": "plugin"
+            }
+        ]
+    }
 }
