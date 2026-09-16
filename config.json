@@ -1,9 +1,14 @@
 {
     "base_path": "",
-    "web_path": "ui/",
+    "web_path": "ui",
     "background_loadable": true,
-    "runetime_path": "runtime/",
-    "runtime": {
-        "linux-x86_64": "plugin"
-    }
+    "load_on_startup": true,
+    "start_on_startup": true, 
+    "runtime_path": "runtime",
+    "runtime": [
+        {
+            "runtime_target": "linux-x86_64",
+            "path": "plugin"
+        }
+    ]
 }
