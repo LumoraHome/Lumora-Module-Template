@@ -48,6 +48,26 @@
                     "sha256": "d64f9b62b77ecacfae57339c2da5427530c5b4b14f5cb0f553eb67d15c5b126a"
                 }
             ]
-        }
+        },
+        {
+            "version": "0.0.3",
+            "changelog": "Build including new manifest/config standards aswell a proper comm response",
+            "source_url": "https://github.com/LumoraHome/Lumora-Module-Template/tree/v0.0.3",
+            "compatibility": {
+                "client_version": ">=0.0.1",
+                "required_capabilities": []
+            },
+            "capabilities": [],
+            "artifacts": [
+                {
+                    "target": {
+                        "os": null,
+                        "architecture": null
+                    },
+                    "url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/v0.0.2/module.zip",
+                    "sha256": "d64f9b62b77ecacfae57339c2da5427530c5b4b14f5cb0f553eb67d15c5b126a"
+                }
+            ]
+        },
     ]
 }
