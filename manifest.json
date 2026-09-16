@@ -2,27 +2,52 @@
     "id": "publisher.module",
     "name": "module name",
     "icon": "https://example.com",
+    "owner": {
+        "name": "Publisher",
+        "url": null
+    },
+    "source_url": "https://github.com/LumoraHome/Lumora-Module-Template",
     "latest_version": "0.0.2",
     "releases": [
         {
             "version": "0.0.1",
             "changelog": "Initial build",
-            "required_capabilities": [],
+            "source_url": "https://github.com/LumoraHome/Lumora-Module-Template/tree/0.0.1",
+            "compatibility": {
+                "client_version": ">=0.0.1 <0.1.0",
+                "required_capabilities": []
+            },
             "capabilities": [],
-            "release_url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/0.0.1/module.zip",
-            "sha256": "f7a20d510e71fa797fe33f9c04214a0ed08cbcadf4a740f82f9b2bf952f199e3",
-            "min_client_version": "0.0.1",
-            "max_client_version": "0.0.1"
+            "artifacts": [
+                {
+                    "target": {
+                        "os": null,
+                        "architecture": null
+                    },
+                    "url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/0.0.1/module.zip",
+                    "sha256": "f7a20d510e71fa797fe33f9c04214a0ed08cbcadf4a740f82f9b2bf952f199e3"
+                }
+            ] 
         },
         {
             "version": "0.0.2",
             "changelog": "New build now with extra command handle function",
-            "required_capabilities": [],
+            "source_url": "https://github.com/LumoraHome/Lumora-Module-Template/tree/v0.0.2",
+            "compatibility": {
+                "client_version": ">=0.0.1",
+                "required_capabilities": []
+            },
             "capabilities": [],
-            "release_url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/v0.0.2/module.zip",
-            "sha256": "d64f9b62b77ecacfae57339c2da5427530c5b4b14f5cb0f553eb67d15c5b126a",
-            "min_client_version": "0.0.1",
-            "max_client_version": "0.0.1"
+            "artifacts": [
+                {
+                    "target": {
+                        "os": null,
+                        "architecture": null
+                    },
+                    "url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/v0.0.2/module.zip",
+                    "sha256": "d64f9b62b77ecacfae57339c2da5427530c5b4b14f5cb0f553eb67d15c5b126a"
+                }
+            ]
         }
     ]
 }
