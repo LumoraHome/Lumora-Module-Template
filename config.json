@@ -16,7 +16,8 @@
             {
                 "os": "linux",
                 "architecture": "x86_64",
-                "path": "plugin"
+                "path": "plugin",
+                "type": "executable"
             }
         ]
     }
