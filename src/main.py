@@ -1,6 +1,17 @@
+from enum import Enum
 import os
 import sys
 import json
+
+class job_status(Enum):
+    ERROR = -1
+    RUNNING = 0
+    SUCCESS = 1
+
+class commands(Enum):
+    UPDATE_STATUS="update_status"
+    DEBUG="debug"
+    JOB_UPDATE="job_update"
 
 def send(command, args):
     payload = json.dumps({
@@ -16,13 +27,14 @@ def handle_command(cmd):
         return None
     match cmd["command"]:
         case "start":
-            send(command="update_status", args=["running", cmd["args"][0]])
-            send(command="debug", args=["started"])
+            send(command=commands.UPDATE_STATUS.value, args=["running", cmd["args"][0]])
+            send(command=commands.DEBUG.value, args=["started"])
         case "stop":
-            send(command="update_status", args=["stopped", cmd["args"][0]])
-            send(command="debug", args=["stopped"])
+            send(command=commands.UPDATE_STATUS.value, args=["stopped", cmd["args"][0]])
+            send(command=commands.DEBUG.value, args=["stopped"])
         case _:
-            send(command="debug", args=[cmd["command"], cmd["args"][-1]])
+            send(command=commands.JOB_UPDATE.value, args=[job_status.SUCCESS.value, cmd["args"][-1]])
+            send(command=commands.DEBUG.value, args=[cmd["command"], cmd["args"][-1]])
 
 send(command="update_status", args=["initialized"])
 
