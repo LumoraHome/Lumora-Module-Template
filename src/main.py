@@ -21,8 +21,8 @@ def handle_command(cmd):
         case "stop":
             send(command="update_status", args=["stopped", cmd["args"][0]])
             send(command="debug", args=["stopped"])
-        case "command":
-            send(command="debug", args=["command issued"])
+        case _:
+            send(command="debug", args=[cmd["command"], cmd["args"][-1]])
 
 send(command="update_status", args=["initialized"])
 
