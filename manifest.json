@@ -14,7 +14,7 @@
             "changelog": "Initial build",
             "source_url": "https://github.com/LumoraHome/Lumora-Module-Template/tree/0.0.1",
             "compatibility": {
-                "client_version": ">=0.0.1 <0.1.0",
+                "client_version": ">=0.0.1, <0.1.0",
                 "required_capabilities": []
             },
             "capabilities": [],
