@@ -7,7 +7,7 @@
         "url": null
     },
     "source_url": "https://github.com/LumoraHome/Lumora-Module-Template",
-    "latest_version": "0.0.2",
+    "latest_version": "0.0.4",
     "releases": [
         {
             "version": "0.0.1",
@@ -66,6 +66,26 @@
                     },
                     "url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/v0.0.3/module.zip",
                     "sha256": "a05ebf977455781ae7d51b22eb5a2603cf0674b3a5e9fd7ee387c9bbdbad4490"
+                }
+            ]
+        },
+        {
+            "version": "0.0.4",
+            "changelog": "Build including new manifest/config standards aswell a proper comm response",
+            "source_url": "https://github.com/LumoraHome/Lumora-Module-Template/tree/v0.0.3",
+            "compatibility": {
+                "client_version": ">=0.1.0",
+                "required_capabilities": []
+            },
+            "capabilities": [],
+            "artifacts": [
+                {
+                    "target": {
+                        "os": null,
+                        "architecture": null
+                    },
+                    "url": "https://github.com/LumoraHome/Lumora-Module-Template/releases/download/v0.0.4/module.zip",
+                    "sha256": null
                 }
             ]
         }
